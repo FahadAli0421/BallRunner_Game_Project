@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myCanvas {
+            background-color: skyblue;
+            border: 15px solid brown;
+        }
+
+        #PlayerScore {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        #High_Score {
+            font-size: 15px;
+            text-align: center;
+        }
+
+
+        #Score_Board {
+            border: 2px solid black;
+            background-color: rgb(106, 92, 92);
+            color: wheat;
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #Scores {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #GameBody {
+            display: flex;
+            background-color: #333333;
+            background-size: cover;
+        }
+
+        #canvascontainer {
+            display: flex;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px; 
+            margin-bottom: 10px; 
+        }
+    </style>
+</head>
+
+<body>
+    <div id="GameBody">
+        <div id="Scores">
+            <div id="Score_Board">
+                <p id="Score_h">Score: </p>
+                <p id="PlayerScore"> 0</p>
+            </div>
+            <button onclick="returnToMainMenu()">Exit Game</button>
+            <div id="retryButtonContainer">
+                <button id="retryButton" style="display: none;" onclick="location.reload()">
+                </button>
+            </div>
+        </div>
+
+        <div id="canvascontainer">
+            <canvas id="myCanvas"></canvas>
+
+            <div>
+                <audio src="/Assets/background.mp3" id="audio_control"></audio>
+                <audio src="/Assets/Game_Over.mp3" id="gameOverSound"></audio>
+            </div>
+        </div>
+    </div>
+    <script src="/SCRIPT_Folder/gameCode.js"></script>
+</body>
+
+</html>
